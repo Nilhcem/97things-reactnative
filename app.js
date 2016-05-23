@@ -6,12 +6,21 @@ import {
   View
 } from 'react-native';
 
+import AppData from './assets/data.json';
+
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      things: AppData
+    };
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          97 things
+          {this.state.things[0].title}
         </Text>
       </View>
     );
