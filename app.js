@@ -1,43 +1,51 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
+  ListView,
   StyleSheet,
   Text,
   View
 } from 'react-native';
 
-import AppData from './assets/data.json';
+import Things from './assets/data.json';
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      things: AppData
+      dataSource: new ListView.DataSource({
+        rowHasChanged: (row1, row2) => row1 !== row2
+      })
     };
+  }
+
+  componentDidMount() {
+    this.setState({
+      dataSource: this.state.dataSource.cloneWithRows(Things)
+    });
   }
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          {this.state.things[0].title}
-        </Text>
+      <ListView
+        dataSource={this.state.dataSource}
+        renderRow={this.renderListRow}
+      />
+    );
+  }
+
+  renderListRow(thing) {
+    return (
+      <View>
+        <Text style={styles.title}>{thing.title}</Text>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  title: {
+    margin: 4
   }
 });
 
