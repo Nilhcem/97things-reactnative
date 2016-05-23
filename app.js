@@ -7,6 +7,8 @@ import {
   View
 } from 'react-native';
 
+var F8Touchable = require('./F8Touchable.js');
+
 import Things from './assets/data.json';
 
 class App extends Component {
@@ -29,16 +31,20 @@ class App extends Component {
     return (
       <ListView
         dataSource={this.state.dataSource}
-        renderRow={this.renderListRow}
+        renderRow={this.renderRow}
       />
     );
   }
 
-  renderListRow(thing) {
+  renderRow(thing) {
     return (
-      <View>
-        <Text style={styles.title}>{thing.title}</Text>
-      </View>
+      <F8Touchable
+        onPress={() => console.log("OK")}
+      >
+        <View>
+          <Text style={styles.title}>{thing.title}</Text>
+        </View>
+      </F8Touchable>
     );
   }
 }
