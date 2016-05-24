@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {
-  AppRegistry,
   Navigator
 } from 'react-native';
 
@@ -27,4 +26,4 @@ class App extends Component {
   }
 }
 
-AppRegistry.registerComponent('nsthings', () => App);
+export default App;
