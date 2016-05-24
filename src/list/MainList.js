@@ -6,8 +6,8 @@ import {
   View
 } from 'react-native';
 
-import TouchableComponent from './TouchableComponent.js';
-import Things from './assets/data.json';
+import TouchableComponent from '../core/TouchableComponent.js';
+import Things from '../core/data.json';
 
 class MainList extends Component {
   constructor(props) {

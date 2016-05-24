@@ -3,8 +3,8 @@ import {
   Navigator
 } from 'react-native';
 
-import MainList from './MainList.js';
-import Details from './Details.js';
+import MainList from './list/MainList.js';
+import Details from './detail/Details.js';
 
 class App extends Component {
   render() {
