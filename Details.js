@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {
   BackAndroid,
-  Text,
-  View
+  ScrollView,
+  Text
 } from 'react-native';
 
 class Details extends Component {
@@ -17,9 +17,11 @@ class Details extends Component {
 
   render() {
     return (
-      <Text>{this.props.thing.title}, by {this.props.thing.from}
-        {this.props.thing.desc}
-      </Text>
+      <ScrollView>
+        <Text>{this.props.thing.title}, by {this.props.thing.from}
+          {this.props.thing.desc}
+        </Text>
+      </ScrollView>
     );
   }
 
