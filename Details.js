@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   BackAndroid,
   ScrollView,
+  StyleSheet,
   Text
 } from 'react-native';
 
@@ -19,7 +20,7 @@ class Details extends Component {
 
   render() {
     return (
-      <ScrollView>
+      <ScrollView style={styles.container}>
         <HTMLView value={this.props.thing.desc} />
       </ScrollView>
     );
@@ -34,5 +35,11 @@ class Details extends Component {
     return true;
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#FFFFFF'
+  }
+});
 
 export default Details;
