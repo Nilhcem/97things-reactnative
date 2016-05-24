@@ -5,6 +5,8 @@ import {
   Text
 } from 'react-native';
 
+import HTMLView from 'react-native-htmlview'
+
 class Details extends Component {
   constructor(props) {
     super(props);
@@ -18,9 +20,7 @@ class Details extends Component {
   render() {
     return (
       <ScrollView>
-        <Text>{this.props.thing.title}, by {this.props.thing.from}
-          {this.props.thing.desc}
-        </Text>
+        <HTMLView value={this.props.thing.desc} />
       </ScrollView>
     );
   }
