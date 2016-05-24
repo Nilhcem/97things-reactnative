@@ -2,6 +2,6 @@ import {
   AppRegistry
 } from 'react-native';
 
-import App from './app.js';
+import App from './App.js';
 
 AppRegistry.registerComponent('nsthings', () => App);
