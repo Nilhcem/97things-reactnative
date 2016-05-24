@@ -12,11 +12,15 @@ import Things from './assets/data.json';
 class MainList extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2
       })
     };
+
+    this.renderRow = this.renderRow.bind(this);
+    this.pressRow = this.pressRow.bind(this);
   }
 
   componentDidMount() {
@@ -36,14 +40,18 @@ class MainList extends Component {
 
   renderRow(thing) {
     return (
-      <F8Touchable
-        onPress={() => console.log("OK")}
-      >
+      <F8Touchable onPress={() => this.pressRow(thing)}>
         <View>
           <Text style={styles.title}>{thing.title}</Text>
         </View>
       </F8Touchable>
     );
+  }
+
+  pressRow(thing) {
+    this.props.navigator.push({
+      name: 'Details',
+    })
   }
 }
 
