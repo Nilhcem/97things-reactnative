@@ -17,12 +17,12 @@ class App extends Component {
   }
 
   renderScene(route, navigator) {
-     if (route.name == 'Main') {
-       return <MainList navigator={navigator} />
-     }
-     if (route.name == 'Details') {
-       return <Details navigator={navigator} />
-     }
+    switch (route.name) {
+      case 'Main':
+        return <MainList navigator={navigator} />
+      case 'Details':
+        return <Details navigator={navigator} {...route.passProps} />
+    }
   }
 }
 

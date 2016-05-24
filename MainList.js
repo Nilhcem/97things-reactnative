@@ -51,6 +51,9 @@ class MainList extends Component {
   pressRow(thing) {
     this.props.navigator.push({
       name: 'Details',
+      passProps: {
+        thing: thing
+      }
     })
   }
 }

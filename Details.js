@@ -7,7 +7,9 @@ import {
 class Details extends Component {
   render() {
     return (
-      <Text>HELLO</Text>
+      <Text>{this.props.thing.title}, by {this.props.thing.from}
+        {this.props.thing.desc}
+      </Text>
     );
   }
 }
