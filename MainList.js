@@ -6,7 +6,7 @@ import {
   View
 } from 'react-native';
 
-import F8Touchable from './F8Touchable.js';
+import TouchableComponent from './TouchableComponent.js';
 import Things from './assets/data.json';
 
 class MainList extends Component {
@@ -40,11 +40,11 @@ class MainList extends Component {
 
   renderRow(thing) {
     return (
-      <F8Touchable onPress={() => this.pressRow(thing)}>
+      <TouchableComponent onPress={() => this.pressRow(thing)}>
         <View>
           <Text style={styles.title}>{thing.title}</Text>
         </View>
-      </F8Touchable>
+      </TouchableComponent>
     );
   }
 
