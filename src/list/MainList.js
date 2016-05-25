@@ -7,7 +7,6 @@ import {
 } from 'react-native';
 
 import TouchableComponent from '../core/TouchableComponent.js';
-import Things from '../core/data.json';
 
 class MainList extends Component {
   constructor(props) {
@@ -24,16 +23,14 @@ class MainList extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      dataSource: this.state.dataSource.cloneWithRows(Things)
-    });
+    this.fetchData();
   }
 
   render() {
     return (
       <ListView
         dataSource={this.state.dataSource}
-        initialListSize={Things.length}
+        initialListSize={97}
         renderRow={this.renderRow}
       />
     );
@@ -56,6 +53,12 @@ class MainList extends Component {
         thing: thing
       }
     })
+  }
+
+  fetchData() {
+    this.setState({
+      dataSource: this.state.dataSource.cloneWithRows(require('../core/data.json'))
+    });
   }
 }
 
