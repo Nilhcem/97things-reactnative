@@ -33,6 +33,7 @@ class MainList extends Component {
     return (
       <ListView
         dataSource={this.state.dataSource}
+        initialListSize={Things.length}
         renderRow={this.renderRow}
       />
     );
