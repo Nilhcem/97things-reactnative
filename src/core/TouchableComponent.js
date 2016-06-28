@@ -4,8 +4,7 @@ import React, {
   Platform,
 } from 'react-native';
 
-const TouchableComponent = Platform.OS === 'android'
-  ? TouchableNativeFeedback
-  : TouchableHighlight;
+const TouchableComponent =
+  Platform.OS === 'android' ? TouchableNativeFeedback : TouchableHighlight;
 
 module.exports = TouchableComponent;
