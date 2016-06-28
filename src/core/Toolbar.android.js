@@ -9,7 +9,7 @@ import Colors from './Colors';
 class Toolbar extends Component {
   render() {
     return (
-      <ToolbarAndroid style={styles.toolbar} {...this.props}>
+      <ToolbarAndroid titleColor="white" style={styles.toolbar} {...this.props}>
         {this.props.children}
       </ToolbarAndroid>
     );
