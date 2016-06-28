@@ -3,8 +3,8 @@ import {
   Navigator
 } from 'react-native';
 
-import MainList from './list/MainList.js';
-import Details from './detail/Details.js';
+import MainListScreen from './list/MainListScreen';
+import DetailsScreen from './detail/DetailsScreen';
 
 class App extends Component {
   render() {
@@ -19,9 +19,9 @@ class App extends Component {
   renderScene(route, navigator) {
     switch (route.name) {
       case 'Main':
-        return <MainList navigator={navigator} />
+        return <MainListScreen navigator={navigator} />
       case 'Details':
-        return <Details navigator={navigator} {...route.passProps} />
+        return <DetailsScreen navigator={navigator} {...route.passProps} />
     }
   }
 }

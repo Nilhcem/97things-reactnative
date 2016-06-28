@@ -6,7 +6,7 @@ import {
   View
 } from 'react-native';
 
-import TouchableComponent from '../core/TouchableComponent.js';
+import TouchableComponent from '../core/TouchableComponent';
 
 class MainList extends Component {
   constructor(props) {
@@ -57,7 +57,7 @@ class MainList extends Component {
 
   fetchData() {
     this.setState({
-      dataSource: this.state.dataSource.cloneWithRows(require('../core/data.json'))
+      dataSource: this.state.dataSource.cloneWithRows(require('../../assets/data.json'))
     });
   }
 }
