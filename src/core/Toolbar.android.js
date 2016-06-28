@@ -19,7 +19,7 @@ class Toolbar extends Component {
 const styles = StyleSheet.create({
   toolbar: {
     backgroundColor: Colors.primary,
-    height: 60,
+    height: 56,
   }
 });
 
