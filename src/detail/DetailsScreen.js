@@ -6,6 +6,7 @@ import {
   View
 } from 'react-native';
 
+import Colors from '../core/Colors';
 import Toolbar from '../core/Toolbar';
 import Details from './Details';
 
@@ -44,7 +45,7 @@ class DetailsScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: Colors.background
   }
 });
 

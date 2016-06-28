@@ -4,6 +4,8 @@ import {
   ToolbarAndroid
 } from 'react-native';
 
+import Colors from './Colors';
+
 class Toolbar extends Component {
   render() {
     return (
@@ -16,7 +18,7 @@ class Toolbar extends Component {
 
 const styles = StyleSheet.create({
   toolbar: {
-    backgroundColor: '#03A9F4',
+    backgroundColor: Colors.primary,
     height: 60,
   }
 });
