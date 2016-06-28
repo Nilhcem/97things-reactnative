@@ -19,7 +19,6 @@ class MainList extends Component {
     };
 
     this.renderRow = this.renderRow.bind(this);
-    this.pressRow = this.pressRow.bind(this);
   }
 
   componentDidMount() {
@@ -38,21 +37,12 @@ class MainList extends Component {
 
   renderRow(thing) {
     return (
-      <TouchableComponent onPress={() => this.pressRow(thing)}>
+      <TouchableComponent onPress={() => this.props.onItemSelected(thing)}>
         <View>
           <Text style={styles.title}>{thing.title}</Text>
         </View>
       </TouchableComponent>
     );
-  }
-
-  pressRow(thing) {
-    this.props.navigator.push({
-      name: 'Details',
-      passProps: {
-        thing: thing
-      }
-    })
   }
 
   fetchData() {

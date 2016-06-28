@@ -14,9 +14,18 @@ class MainListScreen extends Component {
     return (
       <View style={styles.container}>
         <Toolbar title="97 things" />
-        <MainList {...this.props} />
+        <MainList onItemSelected={this.onItemSelected.bind(this)} />
       </View>
     );
+  }
+
+  onItemSelected(item) {
+    this.props.navigator.push({
+      name: 'Details',
+      passProps: {
+        thing: item
+      }
+    })
   }
 }
 

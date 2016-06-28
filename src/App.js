@@ -14,7 +14,9 @@ class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar backgroundColor={Colors.primaryDark} barStyle="light-content" />
+        <StatusBar
+          backgroundColor={Colors.primaryDark}
+          barStyle="light-content" />
         <Navigator
           style={{ flex:1 }}
           initialRoute={{ name: 'Main' }}
