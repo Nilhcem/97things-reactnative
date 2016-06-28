@@ -54,7 +54,10 @@ class MainList extends Component {
 
 const styles = StyleSheet.create({
   title: {
-    margin: 4
+    marginTop: 12,
+    marginBottom: 12,
+    marginLeft: 8,
+    marginRight: 8
   }
 });
 
