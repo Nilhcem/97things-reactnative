@@ -24,7 +24,6 @@ class DetailsScreen extends Component {
       <View style={styles.container}>
         <Toolbar
           title={this.props.thing.title}
-          style={styles.toolbar}
           navIcon={require('../../assets/arrow_back.png')}
           onIconClicked={this.back} />
         <Details content={this.props.thing.desc} />
@@ -46,10 +45,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
-  },
-  toolbar: {
-    backgroundColor: '#03A9F4',
-    height: 60,
   }
 });
 

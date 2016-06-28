@@ -12,7 +12,7 @@ class MainListScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Toolbar title="97 things" style={styles.toolbar} />
+        <Toolbar title="97 things" />
         <MainList {...this.props} />
       </View>
     );
@@ -23,10 +23,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
-  },
-  toolbar: {
-    backgroundColor: '#03A9F4',
-    height: 60,
   }
 });
 
