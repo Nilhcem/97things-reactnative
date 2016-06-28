@@ -13,7 +13,7 @@ class MainListScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Toolbar title="97 things" />
+        <Toolbar title="97 things developers should know" />
         <MainList onItemSelected={this.onItemSelected.bind(this)} />
       </View>
     );
