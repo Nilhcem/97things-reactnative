@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+  Linking,
   ScrollView,
   StyleSheet,
   Text,
@@ -13,7 +14,10 @@ class Details extends Component {
     return (
       <ScrollView>
         <View style={styles.container}>
-          <HTMLView value={this.props.content} />
+          <HTMLView
+              value={this.props.content}
+              onLinkPress={(url) => Linking.openURL(url).catch(err => console.error('Error opening url: ' + url, err))}
+          />
         </View>
       </ScrollView>
     );
