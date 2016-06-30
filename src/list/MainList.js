@@ -6,6 +6,7 @@ import {
   View
 } from 'react-native';
 
+import Colors from '../core/Colors';
 import TouchableComponent from '../core/TouchableComponent';
 
 class MainList extends Component {
@@ -27,7 +28,7 @@ class MainList extends Component {
 
   render() {
     return (
-      <ListView
+      <ListView style={styles.listview}
         dataSource={this.state.dataSource}
         initialListSize={97}
         renderRow={this.renderRow}
@@ -37,7 +38,7 @@ class MainList extends Component {
 
   renderRow(thing) {
     return (
-      <TouchableComponent onPress={() => this.props.onItemSelected(thing)}>
+      <TouchableComponent underlayColor={Colors.primaryLight} onPress={() => this.props.onItemSelected(thing)}>
         <View>
           <Text style={styles.title}>{thing.title}</Text>
         </View>
